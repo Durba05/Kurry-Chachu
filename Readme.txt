@@ -1,51 +1,67 @@
-Thank you for your recent purchase of "Quickeat - Restaurant & Food Delivery HTML5 Template".
+# Kurry Chachu - Food Delivery UI Clone
 
-Author URL: https://themeforest.net/user/bslthemes
-Author Email: beshleyua@gmail.com
+Welcome to **Kurry Chachu**, a front-end project inspired by platforms like Zomato and Swiggy. This is a fictional user interface created purely for learning and demonstration purposes.
 
---------------------------------------
+🚫 Note: This is NOT a real food delivery service.
 
-Overview:
+---
 
-Quickeat - Restaurant & Food Delivery HTML5 Template. We introduce your attention to functional,
-multipurpose Web Template for the food delivery industry. It includes components with states of online ordering,
-making it a helpful product dedicated to modern restaurants and others. The template includes all the necessary designed
-pages with a choice of restaurants, cafes, online ordering, and food delivery ready so that you can sell your meal,
-food, delivery services, and others. We prepared all needed specified menu pages such as restaurants page, services page,
-online delivery with taking away option, contact us pages about us, and become partner pages, blog pages,
-single blog page, pricing table page, and checkout page.
+## 📁 Project Structure
 
---------------------------------------
+├── Kurry Chachu  
+│   ├── doc/  
+│   │   ├── index.html         ← Project documentation  
+│   │   └── assets/            ← Stylesheets & scripts for docs  
+│   ├── template/  
+│   │   ├── *.html             ← UI pages (home, about, checkout, etc.)  
+│   │   └── assets/  
+│   │       ├── css/           ← All CSS files (layout, themes, animations)  
+│   │       ├── js/            ← JavaScript files for interactivity  
+│   │       └── img/           ← Images used in UI  
+│   └── Readme.txt             ← You’re reading it!
 
-Icons used:
+---
 
-FontAwesome - https://fontawesome.com/icons?d=gallery&s=brands,solid&m=free
+## 🧩 Features
 
---------------------------------------
+- 🏠 Home page with featured sections  
+- 📝 Blog and individual blog post pages  
+- 🍽️ Restaurant listings and details  
+- 🛒 Checkout interface (mock)  
+- ❓ FAQ and contact forms  
+- 📦 Partner sign-up page  
+- 🔧 Fully responsive design using HTML, CSS, JS  
 
-Free Google Fonts used:
+---
 
-- Icons from Google Fonts ❤️ Material Icons, FontAwesome
-- Photos and Illustrations from Envato Elements. Check the graphic collection: QuickEat – Graphic Materials
-- Google Font Used Poppins
+## 📌 Purpose
 
---------------------------------------
+This project is ideal for:
+- Frontend development practice
+- UI/UX design showcase
+- Static website demo
+- Portfolio project
 
-Sourse & Credits:
+---
 
-- jQuery https://jquery.com/
-- Nice Select https://github.com/hernansartorio/jquery-nice-select
-- Fancybox http://fancyapps.com/fancybox/
-- Bootstrap https://getbootstrap.com/
+## 🔧 Tools Used
 
---------------------------------------
+- HTML5  
+- CSS3 (with AOS, Fancybox, and other libraries)  
+- JavaScript (Vanilla)  
+- Responsive design principles  
 
-Photos Credits:
+---
 
-- Freepik
+## ⚠️ Disclaimer
 
-IMPORTANT: Images used in the Preview demo are not included in the downloaded package.
+This is not a real business or service. All content is sample/demo only.
 
---------------------------------------
+---
 
-Regards.
+## ✨ Developers:
+1. Durba Datta
+2. Srijita Mitra
+3. Dharmistha 
+4. Akshaj Hui
+5. Arpan Ray
