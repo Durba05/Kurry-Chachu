@@ -1,11 +1,12 @@
 /* ===== AOS (Animate On Scroll) - Enhanced Version ===== */
-/* Customized for QuickIt with color palette: #FFFB97, #FEFE42, #B32C1A, #7A4B47, #2A1617 */
+/* Customized with vibrant color palette: #FFFB97, #FEFE42, #B32C1A, #7A4B47, #2A1617 */
 
 [data-aos] {
-  transition-property: transform, opacity, background-color, box-shadow;
+  transition-property: transform, opacity, background-color, box-shadow, color, border-color;
+  transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 
-/* Duration Classes */
+/* ===== DURATION & DELAY CLASSES ===== */
 [data-aos][data-aos][data-aos-duration="50"],
 body[data-aos-duration="50"] [data-aos] {
   transition-duration: 50ms;
@@ -16,9 +17,8 @@ body[data-aos-duration="100"] [data-aos] {
   transition-duration: .1s;
 }
 
-/* Add all other duration classes (150ms to 3000ms) here... */
+/* Add other durations as needed (150ms to 3000ms) */
 
-/* Delay Classes */
 [data-aos][data-aos][data-aos-delay="50"],
 body[data-aos-delay="50"] [data-aos] {
   transition-delay: 0;
@@ -29,13 +29,13 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   transition-delay: 50ms;
 }
 
-/* Add all other delay classes (100ms to 3000ms) here... */
+/* Add other delays as needed (100ms to 3000ms) */
 
-/* ===== ENHANCED ANIMATIONS ===== */
-/* Fade Animations */
+/* ===== ENHANCED ANIMATIONS WITH VIBRANT COLORS ===== */
+/* Base Fade Animation */
 [data-aos^="fade"][data-aos^="fade"] {
   opacity: 0;
-  transition-property: opacity, transform;
+  transition-property: opacity, transform, background-color;
 }
 
 [data-aos^="fade"][data-aos^="fade"].aos-animate {
@@ -43,64 +43,110 @@ body[data-aos-delay="50"] [data-aos].aos-animate {
   transform: none;
 }
 
-/* Custom Fade Up with Color Accent */
+/* Fade Up with Gradient Highlight */
 [data-aos="fade-up"] {
-  transform: translateY(30px);
-  background: rgba(255, 251, 151, 0.1); /* #FFFB97 with 10% opacity */
-  box-shadow: 0 10px 30px rgba(179, 44, 26, 0.1); /* #B32C1A shadow */
+  transform: translateY(40px);
+  background: linear-gradient(to bottom, rgba(255, 251, 151, 0.2), rgba(254, 254, 66, 0.1));
+  box-shadow: 0 15px 35px rgba(179, 44, 26, 0.15);
 }
 
 [data-aos="fade-up"].aos-animate {
   transform: translateY(0);
   background: transparent;
+  box-shadow: 0 5px 15px rgba(179, 44, 26, 0.1);
 }
 
-/* Custom Zoom with Color Pop */
+/* Fade Down with Color Accent */
+[data-aos="fade-down"] {
+  transform: translateY(-40px);
+  border-top: 3px solid #FEFE42;
+}
+
+/* Zoom with Color Pop */
 [data-aos="zoom-in"] {
-  transform: scale(0.95);
+  transform: scale(0.9);
   opacity: 0;
+  background: rgba(255, 251, 151, 0.3);
+  border: 1px dashed rgba(179, 44, 26, 0.3);
 }
 
 [data-aos="zoom-in"].aos-animate {
   transform: scale(1);
   opacity: 1;
+  background: transparent;
+  border-color: transparent;
 }
 
-/* Slide Animations with Color Border */
+/* Slide Animations with Color Effects */
 [data-aos="slide-up"] {
   transform: translateY(100%);
-  border-bottom: 3px solid var(--yellow-bright); /* #FEFE42 */
+  border-bottom: 4px solid #FEFE42;
+  box-shadow: inset 0 -10px 20px rgba(255, 251, 151, 0.3);
 }
 
-[data-aos="slide-up"].aos-animate {
-  transform: translateY(0);
+[data-aos="slide-left"] {
+  transform: translateX(100px);
+  border-left: 4px solid #B32C1A;
 }
 
-/* Flip Animations */
+/* Flip Animations with Color Backside */
 [data-aos="flip-left"] {
-  transform: perspective(2500px) rotateY(-100deg);
-  background: var(--brown-dark); /* #2A1617 */
+  transform: perspective(2500px) rotateY(-120deg);
+  background: #2A1617;
+  color: #FFFB97;
 }
 
 [data-aos="flip-left"].aos-animate {
   transform: perspective(2500px) rotateY(0);
+  background: inherit;
+  color: inherit;
 }
 
-/* Custom Color Animations */
+/* Color Transition Effects */
 [data-aos="color-pop"] {
   background: transparent;
-  color: var(--brown-dark);
+  color: #2A1617;
+  text-shadow: 0 0 10px rgba(255, 251, 151, 0.5);
 }
 
 [data-aos="color-pop"].aos-animate {
-  background: var(--red-dark); /* #B32C1A */
-  color: white;
+  background: #B32C1A;
+  color: #FFFB97;
+  text-shadow: none;
+}
+
+/* Glow Effect */
+[data-aos="glow"] {
+  opacity: 0.7;
+  filter: drop-shadow(0 0 5px rgba(255, 251, 151, 0));
+}
+
+[data-aos="glow"].aos-animate {
+  opacity: 1;
+  filter: drop-shadow(0 0 15px rgba(255, 251, 151, 0.7));
+}
+
+/* ===== SPECIAL EFFECTS ===== */
+/* Bounce Effect */
+[data-aos="bounce"] {
+  transform: translateY(100px) scale(0.9);
+  animation: bounce-pulse 2s infinite paused;
+}
+
+[data-aos="bounce"].aos-animate {
+  transform: translateY(0) scale(1);
+  animation: none;
+}
+
+@keyframes bounce-pulse {
+  0%, 100% { transform: translateY(100px) scale(0.95); }
+  50% { transform: translateY(90px) scale(0.97); }
 }
 
 /* ===== EASING FUNCTIONS ===== */
 [data-aos][data-aos][data-aos-easing="ease-out-back"],
 body[data-aos-easing="ease-out-back"] [data-aos] {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.4);
 }
 
 [data-aos][data-aos][data-aos-easing="ease-in-out-sine"],
@@ -111,25 +157,25 @@ body[data-aos-easing="ease-in-out-sine"] [data-aos] {
 /* ===== RESPONSIVE ADJUSTMENTS ===== */
 @media (max-width: 768px) {
   [data-aos="fade-up"] {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   
   [data-aos="zoom-in"] {
-    transform: scale(0.98);
+    transform: scale(0.95);
+  }
+  
+  [data-aos="flip-left"] {
+    transform: perspective(1500px) rotateY(-100deg);
   }
 }
 
-/* ===== ANIMATION CLASSES ===== */
-.aos-animate {
-  /* Adds a smooth finish to all animations */
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
 /* ===== PERFORMANCE OPTIMIZATIONS ===== */
-html:not(.no-js) [data-aos^="fade"][data-aos^="fade"] {
-  will-change: opacity, transform;
+html:not(.no-js) [data-aos] {
+  will-change: transform, opacity, background-color, box-shadow;
 }
 
-html:not(.no-js) [data-aos^="zoom"][data-aos^="zoom"] {
-  will-change: transform, opacity;
+/* ===== FINISHING TOUCHES ===== */
+.aos-animate {
+  /* Adds a polished finish to all animations */
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 }
