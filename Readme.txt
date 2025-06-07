@@ -65,5 +65,3 @@ This is not a real business or service. All content is sample/demo only.
 3. Dharmistha 
 4. Akshaj Hui
 5. Arpan Ray
- 
-
