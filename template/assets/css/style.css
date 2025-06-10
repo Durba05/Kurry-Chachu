@@ -276,27 +276,7 @@ header {
     top: 67%;
     width: 50%;
 }
-.wilmington.location-restaurant {
-    top: 28%;
-    right: 0;
-    width: 35%;
-}
-.wilmington.location-restaurant p{
-    line-height: 5px;
-}
-.wilmington.location-restaurant i {
-    font-size: 18px;
-    background-color: #f29f05;
-    color: white;
-    border-radius: 33px;
-    height: 40px;
-    width: 40px;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    margin-right: 13px;
-    padding: 0;
-}
+
 /*------------------------    button   --------------------------*/
 .button {
     text-align: center;
@@ -1461,10 +1441,18 @@ ul.paragraph li i {
     border-radius: 25px;
     margin-top: 40px;
     background-color: white;
+    text-align: center; /* Optional: centers image/text */
 }
+
 .dish img {
+    width: 100%;
+    max-height: 236px;       /* This keeps all dish images uniform */
+    object-fit: cover;       /* Ensures image fills the box nicely */
+    border-radius: 12px;     /* Optional: for rounded image edges */
     padding-bottom: 20px;
+    display: block;
 }
+
 .dish h3 {
     font-size: 36px;
     padding-bottom: 20px;
@@ -1783,24 +1771,41 @@ header.two {
     border-radius: 15px;
     background-color: white;
 }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* ensures alignment at the top */
+}
+.work-card.service {
+  flex: 1;
+  height: 100%; /* optional: make sure they expand equally */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 /*sit-at-home*/
-.sit-at-img{
+.sit-at-img {
     position: relative;
+    width: 600px;
+    height: 600px;
 }
 .sit-at-img:before {
     border-radius: 40px;
     border: 8px solid #F29F05;
     content: "";
     position: absolute;
-    height: 600px;
-    width: 600px;
-    left: 10%;
-    top: 10%;
+    inset: 0;
+    z-index: 1;
 }
-.sit-at-img img{
+.sit-at-img img {
     border-radius: 40px;
-    margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
 }
+
 .sit-at-img .counter-img-data {
     bottom: 18%;
     position: absolute;
@@ -2543,24 +2548,39 @@ li.hide-button h6 i{
     margin-left: 0;
     padding-top: 40px;
 }
-.counter-container{
-    display:flex ;
-    align-items: center;
-    padding: 20px 0;
+/* Styles for the container holding the image and text */
+.food-display-wrapper {
+    display: flex;          /* Enables flexbox for horizontal alignment */
+    align-items: center;    /* Vertically centers items (image and h4) */
+    gap: 15px;              /* Adds space between the image and the text */
+    /* You might want to adjust padding/margin of .counter-food here if needed */
 }
-.counter-container h4 {
-    font-weight: bold;
-    width: 45%;
-    padding-left: 20px;
+
+/* Styles for the image preview */
+.food-item-thumbnail {
+    width: 60px;            /* Adjust size as needed */
+    height: 60px;           /* Adjust size as needed */
+    object-fit: cover;      /* Ensures image fills the space without distortion */
+    border-radius: 8px;     /* Optional: slightly rounded corners */
 }
-.counter-container h3{
-    font-size: 48px;
-    font-weight: bold;
+
+/* Styles for the food name (h4) */
+.food-details h4 {
+    margin: 0;              /* Remove default margin from h4 to prevent extra spacing */
+    font-size: 1.2em;       /* Adjust font size as needed */
+    color: #333;            /* Example color */
+    /* Add any other text styles you want */
 }
+
+/* Optional: If .counter-food itself needs to be a flex container for its children */
 .counter-food {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */ /* Example: if you have price and controls on the right */
+    padding: 10px 0; /* Example padding */
+    border-bottom: 1px solid #eee; /* Example separator */
 }
+
 .price span {
     color: #CFCFCF;
     padding-top: 20px;
