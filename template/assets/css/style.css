@@ -3430,3 +3430,73 @@ li.menu-item-has-children.active {
     height: 100%;
     position: fixed;
 }
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.blog-form .name-form {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+.blog-form .name-form i {
+  margin-right: 10px;
+  color: #d73a2f;
+  min-width: 20px;
+  text-align: center;
+}
+
+.blog-form input,
+.blog-form textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.blog-form textarea {
+  resize: vertical;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.blog-form button {
+  background-color: #d73a2f;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .blog-form {
+    padding: 10px;
+  }
+
+  .blog-form .name-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .blog-form input,
+  .blog-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .blog-form button {
+    font-size: 0.95rem;
+  }
+}

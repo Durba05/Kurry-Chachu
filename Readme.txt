@@ -8,17 +8,48 @@ Welcome to **Kurry Chachu**, a front-end project inspired by platforms like Zoma
 
 ## 📁 Project Structure
 
-├── Kurry Chachu  
-│   ├── doc/  
-│   │   ├── index.html         ← Project documentation  
-│   │   └── assets/            ← Stylesheets & scripts for docs  
-│   ├── template/  
-│   │   ├── *.html             ← UI pages (home, about, checkout, etc.)  
-│   │   └── assets/  
-│   │       ├── css/           ← All CSS files (layout, themes, animations)  
-│   │       ├── js/            ← JavaScript files for interactivity  
-│   │       └── img/           ← Images used in UI  
-│   └── Readme.txt             ← You’re reading it!
+Kurry Chachu/
+│
+├── template/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── aos.css
+│   │   │   ├── color.css
+│   │   │   ├── jquery.fancybox.min.css
+│   │   │   ├── nice-select.css
+│   │   │   ├── owl.carousel.min.css
+│   │   │   ├── owl.theme.default.min.css
+│   │   │   ├── responsive.css
+│   │   │   ├── style.css
+│   │   │   ├── style 2.css   ← (optional; can remove if unused)
+│   │   │   └── table.css
+│   │   │
+│   │   ├── js/
+│   │   │   ├── aos.js
+│   │   │   ├── custom.js
+│   │   │   ├── jquery.fancybox.min.js
+│   │   │   ├── jquery.nice-select.min.js
+│   │   │   ├── jquery-3.6.0.min.js
+│   │   │   ├── owl.carousel.min.js
+│   │   │   └── rainbow-custom.min.js
+│   │   │
+│   │   └── img/
+│   │       └── [all logo, UI, banner, and restaurant images]
+│
+│   ├── index.html               ← ✅ Main homepage (now your source)
+│   ├── about.html
+│   ├── become-partner.html
+│   ├── blog.html
+│   ├── checkout.html
+│   ├── contacts.html
+│   ├── faq.html
+│   ├── pricing-table.html
+│   ├── restaurant-card.html
+│   ├── restaurants.html
+│   ├── services.html
+│   ├── single-blog.html
+│   └── 404.html
+
 
 ---
 
